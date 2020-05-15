@@ -36,7 +36,7 @@ setup(name='tryton-filestore-s3',
     license='GPL-3',
     install_requires=[
         'boto3',
-        'trytond > 4.2',
+        'trytond >= 5.4, < 5.5',
         ],
     use_2to3=True,
     )
