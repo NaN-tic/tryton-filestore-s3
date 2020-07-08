@@ -32,7 +32,10 @@ class FileStoreS3(FileStore):
         s3, bucket = get_client()
         id = uuid.uuid4().hex
         key = name(id, prefix)
-        s3.put_object(Bucket=bucket, Key=key, Body=data)
+        storage_class = config.get('database', 'storage_class',
+            default='STANDARD_IA')
+        s3.put_object(Bucket=bucket, Key=key, Body=data,
+            StorageClass=storage_class)
         return id
 
     def setmany(self, data, prefix=''):
