@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 import sys
-from trytond.model.fields.binary import Binary
-#from trytond.filestore import filestore
 from tryton_filestore_s3 import FileStoreS3
 
 dbname = sys.argv[1]

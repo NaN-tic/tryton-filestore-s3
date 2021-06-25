@@ -1,21 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-    upload_attachments_to_s3
-    Uploads the existing attachments in a data folder to S3
-    Original Code From:
-        https://github.com/trytonus/trytond-attachment-s3/blob/develop/utils/upload_attachments_to_s3.py
+upload_attachments_to_s3
+Uploads the existing attachments in a data folder to S3
+Original Code From:
+    https://github.com/trytonus/trytond-attachment-s3/blob/develop/utils/upload_attachments_to_s3.py
 """
 import os
-import warnings
 from optparse import OptionParser
-
-# from boto.s3.connection import S3Connection, Location
-# from boto.s3.key import Key
-
 import boto3
-import uuid
-
 
 
 def upload(client, bucket, data_path, database, new_db_name=None):

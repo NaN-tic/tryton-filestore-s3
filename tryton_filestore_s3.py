@@ -5,7 +5,6 @@ import uuid
 
 from trytond.config import config
 from trytond.filestore import FileStore
-from trytond.pool import Pool
 
 
 class FileStoreS3(FileStore):
